@@ -20,15 +20,15 @@ const MessageInput = () => {
         <input
           type="text"
           placeholder="Send a message"
-          className="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 text-white"
+          className="border text-sm rounded-lg block w-full p-2.5 bg-red-400 bg-opacity-80 border-red-600 text-white custom-placeholder"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button className="absolute inset-y-0 end-0 flex items-center pe-3">
+        <button className="absolute inset-y-0 end-0 flex items-center pe-3 ">
           {loading ? (
             <div className="loading loading-spinner"></div>
           ) : (
-            <BsSend />
+            <BsSend className="text-white" />
           )}
         </button>
       </div>
