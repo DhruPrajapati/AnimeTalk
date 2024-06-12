@@ -10,6 +10,7 @@ const useGetConversations = () => {
       setLoading(true);
       try {
         const { data } = await axios.get("api/users");
+        console.log("data",data)
         setConversations(data);
       } catch (error) {
         toast.error(error.message);
